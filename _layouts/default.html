@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-    <link rel="stylesheet" href="/assets/css/article.css"> 
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/article.css"> 
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tailwind.min.css">
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -68,7 +68,7 @@
                     />
                     </svg>
                   </div>                
-                    <div>{{ item.Document }}</div>
+                    <div class="truncate">{{ item.Document }}</div>
                 </li>
                 {% endfor %}
               </ul>
@@ -76,10 +76,10 @@
             </div>
           </div>
     
-          <div class="flex-auto w-full md:w-1/2 mb-6 md:mb-0 bg-grey-darkest shadow-lg md:shadow-none">
+          <div class="flex-auto w-full md:w-1/2 mb-6 md:mb-0 shadow-lg md:shadow-none">
     
-            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 text-white text-sm bg-black">
-              <div class="mb-6 lg:w-3/5 lg:mb-0">
+            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 text-whiter text-sm bg-darkest">
+              <div class="mb-6 lg:mb-0">
                 <h3 class="mb-3 text-3xl font-semibold">PPh</h3>
                 <ul class="list-reset mb-8 leading-normal">
                   {% capture pph %}pph{% endcapture %}
@@ -87,7 +87,7 @@
                   {% for item in dataidCategory limit:6 %}  
                   <li class="flex items-stretch mb-3">
                     <div style="">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 mr-2 text-white fill-current" viewBox="0 0 24 24">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 mr-2 text-whiter fill-current" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                       />
                       </svg>
