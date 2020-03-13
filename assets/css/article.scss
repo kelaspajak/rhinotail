@@ -52,7 +52,8 @@ $color6: #f3d2c1;
 .sun { 
   background: $highlight;
 border-radius: 50%; 
-box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
+background:linear-gradient( to bottom left, rgba(255,235,59,1) 0%,rgba(249,168,37 ,1) 90%);
+	box-shadow: 1px 1px 30px rgba(255,160,0 ,1);
   animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite;
 }
 
@@ -69,4 +70,46 @@ box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
 	50% { 
         transform: translateY(-8px); 
     }
+}
+
+.hot
+{ position: absolute;
+	top:25%;
+	left:20%;
+	background:linear-gradient( to top right, rgba(255,87,34,1) 0%,
+	rgba(251,140,0 ,1) 100%);
+	box-shadow: 1px 1px 30px rgba(255,111,0 ,1);
+}
+.suny
+{
+	position: absolute;
+	top:-10%;
+	left:65%;
+	width:50px;
+	height: 50px;
+	border-radius: 100%;
+	background:linear-gradient( to bottom left, rgba(255,235,59,1) 0%,
+	rgba(249,168,37 ,1) 90%);
+	box-shadow: 1px 1px 30px rgba(255,160,0 ,1);
+	animation: inex 3s infinite linear ;
+	
+}
+.kotak
+{
+	width:60px;
+	height:60px;
+	border-radius: 40%;
+  z-index:120;
+  float: right;
+}
+.sunx
+{
+	position: absolute;
+	top:30%;
+	left:45%;
+	width:10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: #fff;
+	opacity:0.2;
 }
