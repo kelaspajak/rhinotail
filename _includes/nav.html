@@ -15,30 +15,22 @@
     -->
       
       <div class="-ml-2 flex items-center justify-between">
-        <span class="w-8 h-8 rounded-full bg-red-500 opacity-25"></span>
-        <span class="-ml-6 w-4 h-4 rounded-full bg-red-500"></span>
+        <div class="weather-icon sun"></div>
       </div>
 
     </div>
     <ul class="list-reset flex flex-wrap md:flex-no-wrap items-center md:justify-between  text-xs">
+      {% assign menu = site.data.navigation.docs %}
+      {% for item in menu%}  
       <li>
-        <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">Products</a>
+        <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">{{ item.title }}</a>
       </li>
-      <li>
-        <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">Solutions</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">Resources</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">Pricing</a>
-      </li>
+      {% endfor %}
       <li class="md:mr-auto">
         <a href="#" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">Blog</a>
       </li>
       <li>
-        <a href="#" class="mr-4 mb-4 md:mb-0 p-2 inline-block no-underline text-paragraph uppercase border border-white rounded">Request a demo</a>
+        <a href="#" class="mr-4 mb-4 md:mb-0 p-2 inline-block no-underline text-paragraph uppercase border-2 border-gray-700 rounded-lg">Request a demo</a>
       </li>
     </ul>
   </nav>
-  <div class="weather-icon sun"></div>
