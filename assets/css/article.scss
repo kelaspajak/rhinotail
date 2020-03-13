@@ -1,0 +1,58 @@
+---
+---
+$background: #f9f4ef; //#eff0f3;
+$paragraph: #2a2a2a;
+$headline: #0d0d0d;
+$button: #ff8e3c;
+$button-text: #0d0d0d;
+$stroke:#0d0d0d; 
+$main: #eff0f3;
+$highlight: #ff8e3c;
+$secondary: #fffffe;
+$tertiary: #d9376e;
+
+//https://codepen.io/ajerez/pen/KwYNWZ
+$color1: #C8DAE6;
+$color2: white;
+$color3: #B8B8B8;
+$color4: #ffd803;
+$color5: #2092A9;
+
+.bg-red-light {
+  background-color: $background!important;
+}
+
+.text-paragraph {
+  color: $paragraph;
+}
+
+.weather-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  float: right;
+  margin: 0px 20px 0 0;
+  animation: weather-icon-move 5s ease-in-out infinite;
+}
+.sun { 
+  background: $color4 
+border-radius: 50%; 
+box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
+  animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite;
+}
+
+@keyframes light {
+  from {
+      box-shadow: rgba(255,255,0,0.2) 0 0 0 10px;
+  }
+  to {
+      box-shadow: rgba(255,255,0,0.2) 0 0 0 17px;
+  }
+}
+
+@keyframes weather-icon-move {
+	50% { 
+        transform: translateY(-8px); 
+    }
+}
