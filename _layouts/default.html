@@ -37,20 +37,22 @@
     
       <div class="container mt-8 p-4 sm:p-8  mx-auto text-gray-800">
     
-        <h1 class="mb-3 tracking-wide text-base uppercase font-normal">KUP</h1>
-        <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">Determine the right
-          <br>plan for you</h2>
+        <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
+        <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
+          Perpajakan
+        </h2>
     
         <div class="container mt-8 mx-auto flex flex-wrap md:shadow-lg">
           <div class="flex-auto w-full md:w-1/2 mb-6 md:mb-0 bg-white shadow-lg md:shadow-none">
     
-            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 bg-grey-lighter text-grey-darker text-sm">
+            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 bg-grey-lighter text-gray-800 text-sm">
               <div class="mb-6 lg:w-3/5 lg:mb-0">
-                <h3 class="mb-3 text-black text-3xl font-semibold">Professional</h3>
-                <p>For individuals who need to create and share beautiful maps and location apps using their own data.
+                <h3 class="mb-3 text-black text-3xl font-semibold">KUP</h3>
+                <p>
+                  Ketentuan Umum dan Tatacara Perpajakan
                 </p>
               </div>
-              <div class="lg:flex-no-shrink">
+              <div class="lg:flex-no-shrink hidden">
                 30-day free trial
                 <span class="text-3xl block my-2 text-black font-semibold">$149</span>
                 <strong>Tahunan</strong>
@@ -61,18 +63,17 @@
                 {% capture kup %}kup{% endcapture %}
                 {% assign dataidCategory = site.data[kup] | sort: "Last Updated" | reverse %}
                 {% for item in dataidCategory limit:15 %}  
-                <li class="flex items-stretch mb-3">
-                  <div style="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 mr-2" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
-                    </svg>
-                  </div>                
-                    <div class="truncate">{{ item.Document }}</div>
-                </li>
+                <a href="{{ item.url }}" class="no-underline">
+                  <li class="flex items-stretch mb-3">
+                    <div>
+                      <div class="bg-button-200 border-2 rounded-full border-gray-800 w-4 h-4 mr-2"></div>      
+                    </div>                
+                    <div>{{ item.Document }}</div>
+                  </li>
+                </a>
                 {% endfor %}
               </ul>
-              <a href="#" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase bg-teal">Resume KUP</a>
+              <a href="#" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase border-2">Resume KUP</a>
             </div>
           </div>
     
@@ -85,17 +86,17 @@
                   {% capture pph %}pph{% endcapture %}
                   {% assign dataidCategory = site.data[pph] | sort: "Last Updated" | reverse %}
                   {% for item in dataidCategory limit:6 %}  
-                  <li class="flex items-stretch mb-3">
-                    <div style="">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 mr-2 text-whiter fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      />
-                      </svg>
+                  <a href="{{ item.url }}" class="no-underline">
+                    <li class="flex items-stretch mb-3">
+                    <div>
+                      <div class="bg-button border-2 rounded-full border-gray-100 w-4 h-4 mr-2"></div>      
                     </div>                
                       <div>{{ item.Document }}</div>
-                  </li>
+                    </li>
+                  </a>
                   {% endfor %}
                 </ul>
+                <a href="/f/pph/" class="inline-block p-4 rounded text-sm text-gray-100 no-underline uppercase border-gray-100 border-2">Resume PPh</a>
               </div>
             </div>
             <div class="px-4 sm:px-6 py-8">
@@ -104,18 +105,17 @@
                 {% capture ppn %}ppn{% endcapture %}
                 {% assign dataidCategory = site.data[ppn] | sort: "Last Updated" | reverse %}
                 {% for item in dataidCategory limit:6 %}  
-                <li class="flex items-stretch mb-3">
-                  <div style="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 mr-2" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
-                    </svg>
-                  </div>                
+                <a href="{{ item.url }}" class="no-underline">
+                  <li class="flex items-stretch mb-3">
+                    <div>
+                      <div class="bg-button border-2 rounded-full border-gray-800 w-4 h-4 mr-2"></div>      
+                    </div>               
                     <div>{{ item.Document }}</div>
-                </li>
+                  </li>
+                </a>
                 {% endfor %}
               </ul>
-              <a href="#" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase bg-teal">Resume PPh</a>
+              <a href="/f/ppn/" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase border-2 border-gray-800">Resume PPN</a>
             </div>
           </div>
         </div>
