@@ -4,7 +4,9 @@ permalink: pretty
 twitter_username: kelaspajakwith1
 instagram: kelaspajakwith
 
-repository: kelaspajak/kelaspajak.github.io
+baseurl: /rhinotail
+
+repository: kelaspajak/rhinotail
 encoding: UTF-8
 
 exclude:
