@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<div class="container mt-8 p-4 sm:p-8  mx-auto text-gray-800">
+    
+    <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
+    <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
+      Perpajakan
+    </h2>
+  
+    <div class="container mt-8 mx-auto flex flex-wrap md:shadow-lg">
+      {% capture dataid %}{{ page.dataid }}{% endcapture %}
+        {% assign top = site.data[dataid] | group_by: "Category" %}
+        {% for cat in top %}  
+      <div class="flex-auto w-full md:w-1/3 mb-0 md:mb-0 bg-white shadow-lg md:shadow-none">
+        
+        <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-2 sm:py-6 bg-grey-lighter text-gray-800 text-sm">
+          <div class="lg:w-3/5 lg:mb-0">            
+            <h3 class="mb-2 text-black text-xl font-semibold">{{ cat.name }}</h3>                      
+          </div>
+        </div>
+      </div>
+  
+      <div class="flex-auto w-full md:w-2/3 mb-6 md:mb-0 shadow-lg md:shadow-none bg-item">
+        <div class="px-4 sm:px-6 py-8">  
+          <ul class="list-reset mb-6 leading-normal">
+            {% for item in cat.items %}
+            {% if item.Topic != nil %}            
+            {% else %}
+                    {% include forItem.html content=dataid %}
+                {% endif %}
+            {% endfor %}
+          </ul> 
+
+            {% capture categoryName %}{{cat.name}}{% endcapture %}
+            {% assign topics = site.data[dataid] | where: "Category", categoryName | group_by: 'Topic' | sort: "SortTopic" | reverse %}
+            {% for topic in topics %}
+            {% if topic.name.size > 0 %}
+            <h3 class="mb-2 text-black text-lg font-medium">{{ topic.name }}</h3> 
+            <ul>
+                {% capture subtopik1 %}{{topic.name}}{% endcapture %}
+                {% assign titles = site.data[dataid] | where: "Topic", subtopik1 | sort: "P#" %} 
+                {% for item in titles %}
+                    {% include forItem.html content=dataid %}
+                {%endfor%}
+            </ul> 
+            {% else %} 
+            {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+      {% endfor %}      
+    </div>
+    
+</div>

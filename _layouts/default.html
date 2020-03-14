@@ -31,98 +31,13 @@
     <meta property="twitter:image:type" content="image/png" />
     <meta property="og:type" content="website" />
     </head>
-  <body>
-    <header class="bg-red-light" style="font-family: Montserrat;">
+  <body class="bg-red-light" style="{{ page.style }}">
+    <header>
       {% include nav.html %}
-    
-      <div class="container mt-8 p-4 sm:p-8  mx-auto text-gray-800">
-    
-        <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
-        <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
-          Perpajakan
-        </h2>
-    
-        <div class="container mt-8 mx-auto flex flex-wrap md:shadow-lg">
-          <div class="flex-auto w-full md:w-1/2 mb-6 md:mb-0 bg-white shadow-lg md:shadow-none">
-    
-            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 bg-grey-lighter text-gray-800 text-sm">
-              <div class="mb-6 lg:w-3/5 lg:mb-0">
-                <h3 class="mb-3 text-black text-3xl font-semibold">KUP</h3>
-                <p>
-                  Ketentuan Umum dan Tatacara Perpajakan
-                </p>
-              </div>
-              <div class="lg:flex-no-shrink hidden">
-                30-day free trial
-                <span class="text-3xl block my-2 text-black font-semibold">$149</span>
-                <strong>Tahunan</strong>
-              </div>
-            </div>
-            <div class="px-4 sm:px-6 py-8">
-              <ul class="list-reset text-black mb-8">
-                {% capture kup %}kup{% endcapture %}
-                {% assign dataidCategory = site.data[kup] | sort: "Last Updated" | reverse %}
-                {% for item in dataidCategory limit:15 %}  
-                <a href="{{ item.url }}" class="no-underline">
-                  <li class="flex content-center mb-3">
-                    <div>
-                      <div class="bg-button-200 border-2 rounded-full border-gray-800 w-4 h-4 mr-2 mt-1"></div>      
-                    </div>                
-                    <div>{{ item.Document }}</div>
-                  </li>
-                </a>
-                {% endfor %}
-              </ul>
-              <a href="#" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase border-2">Resume KUP</a>
-            </div>
-          </div>
-    
-          <div class="flex-auto w-full md:w-1/2 mb-6 md:mb-0 shadow-lg md:shadow-none">
-    
-            <div class="flex flex-wrap justify-between lg:flex-no-wrap px-4 sm:px-6 py-8 text-whiter text-sm bg-darkest">
-              <div class="mb-6 lg:mb-0">
-                <h3 class="mb-3 text-3xl font-semibold">PPh</h3>
-                <ul class="list-reset mb-8 leading-normal">
-                  {% capture pph %}pph{% endcapture %}
-                  {% assign dataidCategory = site.data[pph] | sort: "Last Updated" | reverse %}
-                  {% for item in dataidCategory limit:6 %}  
-                  <a href="{{ item.url }}" class="no-underline">
-                    <li class="flex items-stretch mb-3">
-                    <div>
-                      <div class="bg-button border-2 rounded-full border-gray-100 w-4 h-4 mr-2"></div>      
-                    </div>                
-                      <div>{{ item.Document }}</div>
-                    </li>
-                  </a>
-                  {% endfor %}
-                </ul>
-                <a href="/f/pph/" class="inline-block p-4 rounded text-sm text-gray-100 no-underline uppercase border-gray-100 border-2">Resume PPh</a>
-              </div>
-            </div>
-            <div class="px-4 sm:px-6 py-8">
-              <h3 class="mb-3 text-3xl font-semibold">PPN</h3>
-              <ul class="list-reset mb-8 leading-normal">
-                {% capture ppn %}ppn{% endcapture %}
-                {% assign dataidCategory = site.data[ppn] | sort: "Last Updated" | reverse %}
-                {% for item in dataidCategory limit:6 %}  
-                <a href="{{ item.url }}" class="no-underline">
-                  <li class="flex items-stretch mb-3">
-                    <div>
-                      <div class="bg-button border-2 rounded-full border-gray-800 w-4 h-4 mr-2"></div>      
-                    </div>               
-                    <div>{{ item.Document }}</div>
-                  </li>
-                </a>
-                {% endfor %}
-              </ul>
-              <a href="/f/ppn/" class="inline-block p-4 rounded text-sm text-gray-800 no-underline uppercase border-2 border-gray-800">Resume PPN</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </header>  
-
+    </header> 
+    <main>
+      {{ content }}
+    </main>
     {% if jekyll.environment == 'production' %}
       {% include analytics.html %}
     {% endif %}

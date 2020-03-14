@@ -3,7 +3,7 @@
 $background: #f9f4ef; //#eff0f3;
 $text-whiter: #fffffe;
 $bg-gray-darkest: #272343;
-$paragraph: #2a2a2a;
+$primary: #2a2a2a;
 $headline: #0d0d0d;
 $button: #ff8e3c;
 $button-200: #ffd803;
@@ -12,7 +12,7 @@ $stroke:#0d0d0d;
 $main: #eff0f3;
 $highlight: #ff8e3c;
 $secondary: #fffffe;
-$tertiary: #d9376e;
+$tertiary: #ff5470;
 
 //https://codepen.io/ajerez/pen/KwYNWZ
 $color1: #C8DAE6;
@@ -21,30 +21,19 @@ $color3: #B8B8B8;
 $color4: #ffd803;
 $color5: #2092A9;
 $color6: #f3d2c1;
+$color7: #bae8e8;
+$kup: #ff8e3c;
+$pph: #ff5470;
+$ppn: #ffd803;
 
 .bg-red-light {
   background-color: $background!important;
 }
 
 .text-paragraph {
-  color: $paragraph;
+  color: $primary;
 }
 
-.border-darkest {
-  border-color: #f7fafc;
-}
-
-.bg-button {
-  background-color: $button;
-}
-
-.bg-button-200 {
-  background-color: $button-200;
-}
-
-.bulat {
-  margin: 0 auto;
-}
 
 .text-whiter {
   color: $text-whiter;
@@ -53,8 +42,26 @@ $color6: #f3d2c1;
   background-color: $bg-gray-darkest;
 }
 
+.bg-pph {
+  background-color: $pph;
+}
+
+.bg-kup {
+  background-color: $kup;
+}
+
+.bg-ppn {
+  background-color: $ppn;
+}
+
+.border-kup, .border-ppn {
+ border-color: $primary;
+}
 .bg-main {
   background: $color6;
+}
+.bg-item {
+  background: $main;
 }
 
 .weather-icon {
