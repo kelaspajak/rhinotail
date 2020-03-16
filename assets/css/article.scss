@@ -100,3 +100,15 @@ background:linear-gradient( to bottom left, rgba(255, 4, 72, 1) 0%,rgba(255, 164
         transform: translateY(-8px); 
     }
 }
+
+$color-1: rgba(255, 4, 72, 1);
+$color-2: adjust-hue($color-1, 120%);
+// Amount of steps to iterate through color mix
+$steps: 100;
+
+// Mix colors to go from $color-1 ro @color-2 with 9 total steps
+@for $i from 0 to $steps {
+	.bulat-#{$i + 1} {
+		background: mix($color-1, $color-2, percentage($i / ($steps - 2)));
+	}
+}
