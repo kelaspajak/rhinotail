@@ -247,7 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages (= 204)
+  github-pages
   jekyll-mentions
   jekyll-octicons
   jekyll-readme-index

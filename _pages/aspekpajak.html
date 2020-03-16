@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /f/aspekpajak/
+dataid: aspekpajak
+---
+<div class="container mt-8 p-4 sm:p-8  mx-auto text-gray-800">
+
+    <h1 class="mb-2 tracking-wide text-3xl md:text-5xl font-semibold">
+      Aspek Pajak
+    </h1>
+    <h2 class="tracking-wide text-base uppercase font-normal">
+      Per Industri
+    </h2>
+  
+    <div id="lainlain" class="flex flex-wrap container mt-8 mx-auto">
+      <!-- Item -->
+      {% capture namatopik %}{{ page.dataid }}{% endcapture %}
+      {% assign sort1 = site.fitur | where: "fitur", namatopik %}
+      {% for titles in sort1 %}
+      <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+        <div class="shadow-lg rounded-lg shadow-lg bg-white">
+          <div class="flex flex-col p-4">
+            <div class="flex-shrink-0 w-10 h-10">
+                <img class="w-full h-full rounded-full" src="{{site.baseurl}}/assets/icon/{{page.dataid}}/{{titles.img}}" alt="" />
+            <p class="text-md truncate font-semibold">{{titles.title}}</p></div>
+            
+            <p class="text-gray-400 text-xs">{{titles.topik}}</p>            
+            <a href="{{titles.linkurl}}" class="self-end mt-4 text-xs text-reddish-500" target="_blank">Show more...</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>

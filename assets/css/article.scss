@@ -25,6 +25,12 @@ $color7: #bae8e8;
 $kup: #ff8e3c;
 $pph: #ff5470;
 $ppn: #ffd803;
+$color8: #ff0488;
+$color9: #ff542b;
+
+.text-reddish-500 {
+  color: $color9;
+}
 
 .bg-red-light {
   background-color: $background!important;
@@ -33,7 +39,6 @@ $ppn: #ffd803;
 .text-paragraph {
   color: $primary;
 }
-
 
 .text-whiter {
   color: $text-whiter;
@@ -76,14 +81,14 @@ $ppn: #ffd803;
 .sun { 
   background: $highlight;
 border-radius: 50%; 
-background:linear-gradient( to bottom left, rgba(255,235,59,1) 0%,rgba(249,168,37 ,1) 90%);
-	box-shadow: 1px 1px 30px rgba(255,160,0 ,1);
+background:linear-gradient( to bottom left, rgba(255, 4, 72, 1) 0%,rgba(255, 164, 72, 1) 90%);
+	box-shadow: 1px 1px 30px rgba(255, 69, 43, 1);
   animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite;
 }
 
 @keyframes light {
   from {
-      box-shadow: rgba(255,255,0,0.6) 0 0 0 5px;
+      box-shadow: rgba(255, 226, 69, 0.8) 0 0 0 3px;
   }
   to {
       box-shadow: rgba(255,210,0,0.2) 0 0 0 10px;

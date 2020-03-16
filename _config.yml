@@ -46,7 +46,7 @@ defaults:
       path: ""
       type: fitur
     values:
-      layout: detail
+      layout: index
   - scope:
       path: "assets/img"
     values:
