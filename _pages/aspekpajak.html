@@ -25,14 +25,15 @@ dataid: aspekpajak
                     {% if titles.img %}
                     <img class="w-full h-full rounded-full"
                     src="{{site.baseurl}}/assets/icon/{{page.dataid}}/{{titles.img}}" 
+                    style="-webkit-filter: {% cycle "grayscale", "sepia", "invert" %}(100%)"
                         alt="" />
                     {% else %}
-                    <div class="border-2 rounded-full border-gray-600 bg-red-500 w-6 h-6 mr-2 mt-1"></div>
+                    <div class="bulat-{{ forloop.index0 }} border-2 rounded-full border-gray-600 w-6 h-6 mr-2 mt-1"></div>
                     {% endif %}
                 </div>
                 <div class="ml-3">
                     <p class="text-md truncate font-semibold whitespace-no-wrap">
-                        {{titles.title}}
+                        {{ forloop.index0 | plus: 1 }}. {{titles.title}}
                     </p>
                     <p class="text-gray-400 text-xs">{{titles.topik}}</p>  
                 </div>
