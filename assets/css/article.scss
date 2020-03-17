@@ -28,6 +28,19 @@ $ppn: #ffd803;
 $color8: #ff0488;
 $color9: #ff542b;
 
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
 .text-reddish-500 {
   color: $color9;
 }
