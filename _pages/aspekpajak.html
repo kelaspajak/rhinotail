@@ -12,7 +12,7 @@ dataid: aspekpajak
       Per Industri
     </h2>
   
-    <div id="lainlain" class="flex flex-wrap container mt-8 mx-auto">
+    <div id="aspekpajak" class="flex flex-wrap container mt-8 mx-auto">
       <!-- Item -->
       {% capture namatopik %}{{ page.dataid }}{% endcapture %}
       {% assign sort1 = site.fitur | where: "fitur", namatopik %}
@@ -24,9 +24,7 @@ dataid: aspekpajak
                 <div class="flex-shrink-0 w-10 h-10">
                     {% if titles.img %}
                     <img class="w-full h-full rounded-full"
-                    src="{{site.baseurl}}/assets/icon/{{page.dataid}}/{{titles.img}}" 
-                    style="-webkit-filter: {% cycle "grayscale", "sepia", "invert" %}(100%)"
-                        alt="" />
+                    src="{{site.baseurl}}/assets/icon/{{page.dataid}}/{{titles.img}}" alt="{{titles.title}}" />
                     {% else %}
                     <div class="bulat-{{ forloop.index0 }} border-2 rounded-full border-gray-600 w-6 h-6 mr-2 mt-1"></div>
                     {% endif %}
