@@ -1,13 +1,14 @@
 ---
 id: Modul SPOP
 title: Download SPOP 2020
-linkurl: /fitur/spop.html
+linkurl: /f/spop/
 fitur: lainlain
 category: lainlain
 createdTime : 13/01/2020
 modifiedTime : 22/01/2020
 topik: PBB
 color: ffd33d
+permalink: /f/spop/
 ---
 ### SPOP PBB 2020
 0. [SPOP Induk](https://github.com/kelaspajak/docs/blob/master/lainlain/file/SPOP-PBB-2020/Formulir%20SPOP.xlsx?raw=true)
