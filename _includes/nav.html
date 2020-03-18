@@ -5,11 +5,11 @@
         <div class="weather-icon sun"></div>
       </div>
     </div>
-    <ul class="list-reset flex flex-wrap md:flex-no-wrap items-center md:justify-between  text-xs">
+    <ul class="list-reset flex flex-wrap md:flex-no-wrap items-center md:justify-between text-xs">
       {% assign menu = site.data.navigation.docs %}
       {% for item in menu%}  
       <li>
-        <a href="{{site.baseurl}}/{{ item.url }}" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">{{ item.title }}</a>
+        <a href="{{ item.url }}" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">{{ item.title }}</a>
       </li>
       {% endfor %}
       <li class="md:mr-auto hidden">
