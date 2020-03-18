@@ -57,7 +57,7 @@ docs:
     id: lainlain
  #   style: " style='opacity: 30%;'"
     description: Kumpulan file untuk membantu analisa aspek perpajakan
-    url: /fitur/lain-lain/
+    url: /f/lain-lain/
     active: true
     price: 
     - rupiah: Free
