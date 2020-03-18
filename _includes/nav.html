@@ -9,7 +9,7 @@
       {% assign menu = site.data.navigation.docs %}
       {% for item in menu%}  
       <li>
-        <a href="{{ item.url }}" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">{{ item.title }}</a>
+        <a href="{{site.baseurl}}/{{ item.url }}" class="mr-4 mb-4 md:mb-0 inline-block no-underline text-paragraph">{{ item.title }}</a>
       </li>
       {% endfor %}
       <li class="md:mr-auto">
