@@ -5,12 +5,12 @@ layout: default
     
     <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
     <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
-      Perpajakan
+      Perpajakan {{ page.title }}
     </h2>
   
     <div class="container mt-8 mx-auto flex flex-wrap md:shadow-lg">
       {% capture dataid %}{{ page.dataid }}{% endcapture %}
-        {% assign top = site.data[dataid] | group_by: "Category" %}
+        {% assign top = site.data[dataid] | group_by: "Category" | sort:"SortCategory" %}
         {% for cat in top %}  
       <div class="flex-auto w-full md:w-1/3 mb-0 md:mb-0 bg-white shadow-lg md:shadow-none">
         
