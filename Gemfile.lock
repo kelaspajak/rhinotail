@@ -262,7 +262,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  github-pages (= 204)
   html-proofer
   jekyll-mentions
   jekyll-octicons

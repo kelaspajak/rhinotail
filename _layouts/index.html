@@ -2,4 +2,15 @@
 layout: default
 ---
 
-{{ content }}
+<div class="container mt-8 p-4 sm:p-8 mx-auto text-gray-800">
+    
+    <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
+    <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
+      {{ page.title }}
+    </h2>
+  
+    <div class="p-8 mx-auto md:shadow-lg rounded-lg markdown-body">
+        {{ content }}
+    </div>
+    
+</div>
