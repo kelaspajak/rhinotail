@@ -1,18 +1,19 @@
 ---
 ---
 $background: #f9f4ef; //#eff0f3;
+$paragraph: #2d334a;
 $text-whiter: #fffffe;
 $bg-gray-darkest: #272343;
-$primary: #2a2a2a;
+$primary: #2d334a;
 $headline: #0d0d0d;
 $button: #ff8e3c;
 $button-200: #ffd803;
 $button-text: #0d0d0d;
-$stroke:#0d0d0d; 
-$main: #eff0f3;
-$highlight: #ff8e3c;
-$secondary: #fffffe;
-$tertiary: #ff5470;
+$stroke:#272343; 
+$main: #fffffe;
+$highlight: #ffd803;
+$secondary: #e3f6f5;
+$tertiary: #bae8e8;
 
 //https://codepen.io/ajerez/pen/KwYNWZ
 $color1: #C8DAE6;
@@ -45,12 +46,12 @@ $color9: #ff542b;
   color: $color9;
 }
 
-.bg-red-light {
-  background-color: $background!important;
+.background {
+  background-color: $button-200 !important;
 }
 
 .text-paragraph {
-  color: $primary;
+  color: $paragraph;
 }
 
 .text-whiter {
@@ -122,8 +123,8 @@ background:linear-gradient( to bottom left, rgba(255, 4, 72, 1) 0%,rgba(255, 164
     }
 }
 
-$color-1: rgba(255, 4, 72, 1);
-$color-2: adjust-hue($color-1, 120%);
+$color-1: rgb(130, 212, 127);
+$color-2: adjust-hue($color-1, 110%);
 // Amount of steps to iterate through color mix
 $steps: 100;
 
