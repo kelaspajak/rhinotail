@@ -31,8 +31,11 @@
     <meta property="twitter:image:width" content="100%" />
     <meta property="twitter:image:alt" content="{{ site.description }}" />
     <meta property="twitter:image:type" content="image/png" />
-    <meta property="og:type" content="website" />
-    
+    <meta property="og:type" content="website" />    
+    <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js"
+        defer
+    ></script>
     </head>
   <body class="background" style="{{ page.style }}">
     <header>
@@ -46,7 +49,7 @@
     {% endif %}
 
     <div class="mt-16"></div>
-    {% include footer.html %}
+    {% comment %}{% include footer.html %}{% endcomment %}
   </body>
 </html>
 

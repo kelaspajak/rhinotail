@@ -8,19 +8,19 @@ docs:
     children:
       - title: "KUP"
         id: kup
-        url: /fitur/resume/kup/
+        url: /f/kup/
         description: "Ketentuan Umum dan Tatacara Perpajakan"
       - title: "PPh"
         id: pph
-        url: /fitur/resume/pph/
+        url: /f/pph/
         description: "Pajak Penghasilan"
       - title: "PPN & PPn BM"
         id: ppn
-        url: /fitur/resume/ppn/
+        url: /f/ppn/
         description: "Pajak Pertambahan Nilai dan Pajak Penjualan Barang Mewah"
       - title: "Efaktur"
         id: efaktur
-        url: /fitur/resume/efaktur/
+        url: /f/efaktur/
         description: "Semua tentang efaktur beserta kode errornya"
 #      - title: "PBB"
 #        url: /fitur/resume/pbb/
