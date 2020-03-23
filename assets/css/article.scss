@@ -5,7 +5,7 @@ $paragraph: #5f6c7b;
 $text-whiter: #fffffe;
 $bg-gray-darkest: #272343;
 $primary: #2d334a;
-$headline: #0d0d0d;
+$headline: #094067;
 $button: #ff8e3c;
 $button-200: #ffd803;
 $button-text: #0d0d0d;
@@ -58,7 +58,7 @@ $color9: #ff542b;
   color: $text-whiter;
 }
 .bg-darkest {
-  background-color: $bg-gray-darkest;
+  background-color: $headline;
 }
 
 .bg-pph {
@@ -150,7 +150,8 @@ nav ul li {
 
 nav a {
 	display:block;
-	text-decoration:none;
+  text-decoration:none;
+  color: $headline;
 }
 
 /* Hide Dropdowns by Default */

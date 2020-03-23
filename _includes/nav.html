@@ -7,7 +7,7 @@
   </div>
   <ul>
     {% for item in site.data.navigation.docs %}
-        <li class="ml-4 sm:ml-6 text-blue-700"><a href="#">{{ item.title }}</a>          
+        <li class="ml-4 sm:ml-6"><a href="{{ item.url }}">{{ item.title }}</a>          
         <!-- First Tier Drop Down -->
         <ul x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="rounded-md bg-white shadow-xs">
           {% for entry in item.children %}
