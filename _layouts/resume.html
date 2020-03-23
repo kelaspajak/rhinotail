@@ -1,46 +1,48 @@
 ---
 layout: default
 ---
+
+
 <div class="container mt-8 p-4 sm:p-8  mx-auto text-gray-800">
-    
   <h1 class="mb-2 tracking-wide text-base uppercase font-normal">Resume</h1>
   <h2 class="tracking-wide text-3xl md:text-5xl font-semibold">
     {{ page.title }}
   </h2>
 
   {% capture dataid %}{{ page.dataid }}{% endcapture %}
-  {% assign top = site.data[dataid] | group_by: "Category" | sort:"SortCategory" %}
-  {% for cat in top %}
-    <div class="bg-white shadow overflow-hidden rounded-lg my-6">
-      <div class="bg-orange-100 px-4 py-5 border-b border-gray-200 sm:px-6">
+  {%- assign top = site.data[dataid] | group_by: "Category" | sort:"SortCategory" -%}
+  {%- for cat in top -%}
+    <div class="shadow overflow-hidden rounded-lg my-6 bg-white">
+      <div class="px-4 py-5 border-b border-gray-200 sm:px-6">
         <h3 class="text-lg leading-6 font-semibold text-gray-900">
-          {{ cat.name }}
+          {{- cat.name -}}
         </h3>
         <p class="hidden mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-          {{ page.description }}
+          {{- page.description -}}
         </p>
       </div>
       <div>
-        <dl>          
-          <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dl>                 
+          <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm leading-5 font-medium text-gray-500">
             </dt>
             <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-              {% for item in cat.items %}            
-              {% if item.Topic != nil %}
-              {% else %}
-                {% include forItem.html content=dataid %}              
-              {% endif %}
-              {% endfor %}
+              {%- for item in cat.items -%}            
+              {%- if item.Topic != nil -%}
+              {%- else -%}
+                {%- include forItem.html content=dataid -%}              
+              {%- endif -%}
+              {%- endfor -%}
             </dd>
-          </div>          
+          </div>
+          
 
           {% capture categoryName %}{{cat.name}}{% endcapture %}
           {% assign topics = site.data[dataid] | where: "Category", categoryName | group_by: 'Topic' | sort: "SortTopic" | reverse %}
           {% for topic in topics %}
           {% if topic.name.size > 0 %}
-          <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">            
-            <dt class="text-sm leading-5 font-medium">
+          <div class="odd:bg-gray-200 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">            
+            <dt class="text-md leading-5 font-semibold">
               {{ topic.name }}
             </dt>
             <dd class="mt-1 text-sm leading-5 sm:mt-0 sm:col-span-2">

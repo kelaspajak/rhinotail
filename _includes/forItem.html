@@ -1,8 +1,6 @@
-{% capture content %}{{include.content}}{% endcapture %}
-
-  <li class="flex content-center mb-3">
+{%- capture content -%}{{- include.content -}}{%- endcapture -%}
+<li class="flex content-center mb-3">
     <div>
       <div class="bg-{{content}} border-{{content}} border-2 rounded-full  w-4 h-4 mr-2 mt-1"></div>
     </div>
-    <a href="{{ item.url }}" class="no-underline"><div>{{ item.Document }}</div></a>
-  </li>
+    <a href="{{ item.url }}" class="no-underline"><div>{{ item.Document }}</div></a></li>

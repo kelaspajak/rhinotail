@@ -1,6 +1,6 @@
 ---
 ---
-$background: #fffffe; //#eff0f3;
+$background: #eff0f3; //#eff0f3;
 $paragraph: #5f6c7b;
 $text-whiter: #fffffe;
 $bg-gray-darkest: #272343;
@@ -84,6 +84,11 @@ $color9: #ff542b;
 .border-kup, .border-ppn {
  border-color: $primary;
 }
+
+.border-pph {
+  border-color: #C8DAE6;
+}
+
 .bg-main {
   background: $color6;
 }
@@ -183,3 +188,13 @@ nav ul ul ul li {
 /* Change this in order to change the Dropdown symbol */
 nav > li > a:after { content:  ' +'; }
 nav > li > a:only-child:after { content: ''; }
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item__action {
+  margin-inline-start: auto;
+}
